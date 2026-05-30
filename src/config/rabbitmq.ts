@@ -7,12 +7,12 @@ let rabbitmqChannel: Channel | null = null;
 
 const QUEUE_CONFIG = {
     whatsapp_inbound: {
-        name: 'whatsapp.inbound.v1',
+        name: 'whatsapp.inbound.v1.delva',
         options: {
             durable: true,
             arguments: {
                 'x-dead-letter-exchange': 'dlx',
-                'x-dead-letter-routing-key': 'whatsapp.inbound.v1',
+                'x-dead-letter-routing-key': 'whatsapp.inbound.v1.delva',
                 'x-max-length': 10000,
             },
         },
