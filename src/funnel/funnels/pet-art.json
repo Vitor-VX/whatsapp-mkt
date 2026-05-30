@@ -1,0 +1,299 @@
+{
+  "id": "nota-marketing-br",
+  "name": "Nota de Marketing",
+  "startNode": "welcome",
+  "nodes": {
+    "welcome": {
+      "id": "welcome",
+      "type": "typing",
+      "durationMs": 1500,
+      "action": "typing",
+      "nextNode": "msg_1"
+    },
+    "msg_1": {
+      "id": "msg_1",
+      "type": "text",
+      "content": "Oi, tudo bem? 👋",
+      "nextNode": "delay_1"
+    },
+    "delay_1": {
+      "id": "delay_1",
+      "type": "delay",
+      "ms": 900,
+      "nextNode": "msg_2"
+    },
+    "msg_2": {
+      "id": "msg_2",
+      "type": "text",
+      "content": "Deixa eu te mostrar uma coisa rápida 👀",
+      "nextNode": "delay_2"
+    },
+    "delay_2": {
+      "id": "delay_2",
+      "type": "delay",
+      "ms": 1200,
+      "nextNode": "msg_3"
+    },
+    "msg_3": {
+      "id": "msg_3",
+      "type": "image",
+      "url": "https://files.botsync.site/mkt-guerrilha/Captura%20de%20tela%202026-05-29%20202849.png",
+      "caption": "Você já viu aquelas notas de *R$20* que o pessoal deixa na rua e viraliza no Instagram?",
+      "nextNode": "delay_3"
+    },
+    "delay_3": {
+      "id": "delay_3",
+      "type": "delay",
+      "ms": 1500,
+      "nextNode": "msg_4"
+    },
+    "msg_4": {
+      "id": "msg_4",
+      "type": "text",
+      "content": "Na frente parece dinheiro de verdade…",
+      "nextNode": "delay_4"
+    },
+    "delay_4": {
+      "id": "delay_4",
+      "type": "delay",
+      "ms": 1100,
+      "nextNode": "msg_5"
+    },
+    "msg_5": {
+      "id": "msg_5",
+      "type": "text",
+      "content": "Mas quando a pessoa pega pra ver 👇",
+      "nextNode": "delay_5"
+    },
+    "delay_5": {
+      "id": "delay_5",
+      "type": "delay",
+      "ms": 1300,
+      "nextNode": "msg_6"
+    },
+    "msg_6": {
+      "id": "msg_6",
+      "type": "text",
+      "content": "Atrás tem o @ do negócio, cupom e uma frase criativa 😅",
+      "nextNode": "delay_6"
+    },
+    "delay_6": {
+      "id": "delay_6",
+      "type": "delay",
+      "ms": 1400,
+      "nextNode": "msg_7"
+    },
+    "msg_7": {
+      "id": "msg_7",
+      "type": "text",
+      "content": "É literalmente um dos jeitos mais baratos de conseguir seguidores hoje 🔥",
+      "nextNode": "delay_7"
+    },
+    "delay_7": {
+      "id": "delay_7",
+      "type": "delay",
+      "ms": 1200,
+      "nextNode": "msg_contribution_1"
+    },
+    "msg_contribution_1": {
+      "id": "msg_contribution_1",
+      "type": "text",
+      "content": "Inclusive, eu mesmo criei 2 modelos prontos disso 👇",
+      "nextNode": "delay_8"
+    },
+    "delay_8": {
+      "id": "delay_8",
+      "type": "delay",
+      "ms": 1100,
+      "nextNode": "msg_contribution_2"
+    },
+    "msg_contribution_2": {
+      "id": "msg_contribution_2",
+      "type": "text",
+      "content": "Eu te envio tudo antes… e depois você só faz uma contribuição simbólica de *R$9,90* no PIX pelo meu trabalho 🙏",
+      "nextNode": "delay_9"
+    },
+    "delay_9": {
+      "id": "delay_9",
+      "type": "delay",
+      "ms": 1400,
+      "nextNode": "msg_contribution_3"
+    },
+    "msg_contribution_3": {
+      "id": "msg_contribution_3",
+      "type": "text",
+      "content": "Isso me ajuda muito a continuar criando novas ideias assim 🙌",
+      "nextNode": "delay_audio_1"
+    },
+    "delay_audio_1": {
+      "id": "delay_audio_1",
+      "type": "delay",
+      "ms": 1000,
+      "nextNode": "audio_dalva_1"
+    },
+    "audio_dalva_1": {
+      "id": "audio_dalva_1",
+      "type": "audio",
+      "url": "https://files.botsync.site/mkt-guerrilha/audio_funil_01.opus",
+      "durationMs": 25000,
+      "nextNode": "delay_buttons"
+    },
+    "delay_buttons": {
+      "id": "delay_buttons",
+      "type": "delay",
+      "ms": 1000,
+      "nextNode": "desire_buttons"
+    },
+    "desire_buttons": {
+      "id": "desire_buttons",
+      "type": "buttons",
+      "body": "Quer receber os 2 modelos prontos e editáveis no Canva agora mesmo? 👇",
+      "buttons": [
+        {
+          "id": "yes",
+          "title": "Pode enviar!",
+          "nextNode": "confirm_buttons"
+        },
+        {
+          "id": "how_it_works_btn",
+          "title": "Como funciona? 🤔",
+          "nextNode": "how_it_works"
+        }
+      ]
+    },
+    "how_it_works": {
+      "id": "how_it_works",
+      "type": "text",
+      "content": "É bem simples:\n\n1️⃣ Você baixa os 2 modelos editáveis no Canva\n2️⃣ Coloca seu @ ou QR Code\n3️⃣ Imprime onde quiser\n\nE pronto — já começa a atrair gente 👀\n\nEu só peço uma contribuição simbólica de *R$9,90* no PIX, pra ajudar meu trabalho 🙏",
+      "nextNode": "delay_back_buttons"
+    },
+    "delay_back_buttons": {
+      "id": "delay_back_buttons",
+      "type": "delay",
+      "ms": 1000,
+      "nextNode": "desire_buttons"
+    },
+    "confirm_buttons": {
+      "id": "confirm_buttons",
+      "type": "buttons",
+      "body": "Perfeito 🙌\n\nComo eu te falei, eu te envio tudo antes…\n\nE depois você faz só a contribuição de *R$9,90* no PIX pra apoiar meu trabalho 😊\n\nFechado assim?",
+      "buttons": [
+        {
+          "id": "confirm",
+          "title": "Pode enviar ✅",
+          "nextNode": "deliver_product"
+        },
+        {
+          "id": "cancel",
+          "title": "Não, prefiro não",
+          "nextNode": "soft_cancel"
+        }
+      ]
+    },
+    "deliver_product": {
+      "id": "deliver_product",
+      "type": "action",
+      "action": "deliverProductCards",
+      "nextNode": "delivered_msg"
+    },
+    "delivered_msg": {
+      "id": "delivered_msg",
+      "type": "text",
+      "content": "Pronto! 🎉 É só clicar em *Editar no Canva*, você pode editar o que quiser e mandar imprimir!\n\nQualquer dúvida pra editar, é só chamar aqui 😊",
+      "nextNode": "audio_dalva_2"
+    },
+    "delay_audio_2": {
+      "id": "delay_audio_2",
+      "type": "delay",
+      "ms": 2000,
+      "nextNode": "audio_dalva_2"
+    },
+    "audio_dalva_2": {
+      "id": "audio_dalva_2",
+      "type": "audio",
+      "url": "https://files.botsync.site/mkt-guerrilha/audio_funil_02.opus",
+      "durationMs": 20000,
+      "nextNode": "delay_payment"
+    },
+    "delay_payment": {
+      "id": "delay_payment",
+      "type": "delay",
+      "ms": 1000,
+      "nextNode": "delay_pitch_3"
+    },
+    "delay_pitch_3": {
+      "id": "delay_pitch_3",
+      "type": "delay",
+      "ms": 1000,
+      "nextNode": "payment_buttons"
+    },
+    "payment_buttons": {
+      "id": "payment_buttons",
+      "type": "buttons",
+      "body": "Quando quiser confirmar, é só clicar aqui 👇",
+      "buttons": [
+        {
+          "id": "pay",
+          "title": "💳 Pagar R$9,90",
+          "nextNode": "create_payment"
+        },
+        {
+          "id": "skip",
+          "title": "Depois eu pago",
+          "nextNode": "skip_payment"
+        }
+      ]
+    },
+    "create_payment": {
+      "id": "create_payment",
+      "type": "action",
+      "action": "createPixPayment",
+      "nextNode": "send_payment_link"
+    },
+    "send_payment_link": {
+      "id": "send_payment_link",
+      "type": "text",
+      "content": "Aqui está a chave Copia e Cola para a sua contribuição de *R$ 9,90* no PIX 👇",
+      "nextNode": "send_code_pix"
+    },
+    "send_code_pix": {
+      "id": "send_code_pix",
+      "type": "pix",
+      "content": "{{pixCode}}",
+      "price": "990",
+      "namePix": "João Victor Rocha Neto",
+      "key": "69993161840",
+      "keyType": "PHONE",
+      "nextNode": "wait_payment"
+    },
+    "wait_payment": {
+      "id": "wait_payment",
+      "type": "waitInput",
+      "saveAs": "_paymentConfirmation",
+      "content": "Perfeito 🙌\n\nAgora você pode fazer a contribuição de *R$9,90* pra apoiar meu trabalho 🙏\n\nE ó, um detalhe importante 👇\n\nQuem fizer isso *ainda hoje* eu coloco numa lista fechada onde envio *todas as novas artes que eu criar antes de liberar pro restante* 🎁\n\nSempre que sair algo novo, você recebe primeiro.\n\nDepois eu fecho essa lista pra não ficar grande demais 🙂",
+      "nextNode": "payment_pending_hold"
+    },
+    "payment_pending_hold": {
+      "id": "payment_pending_hold",
+      "type": "text",
+      "content": "Verificando o pagamento... 🔍"
+    },
+    "payment_confirmed": {
+      "id": "payment_confirmed",
+      "type": "text",
+      "content": "✅ Pagamento confirmado com sucesso! Muito obrigado pela sua honestidade e apoio. Que essas artes te tragam uma enxurrada de clientes! 🚀💛",
+      "nextNode": "end_node"
+    },
+    "soft_cancel": {
+      "id": "soft_cancel",
+      "type": "text",
+      "content": "Sem problemas! Se mudar de ideia ou quiser o material mais tarde, é só me dar um oi aqui. 👍",
+      "nextNode": "end_node"
+    },
+    "end_node": {
+      "id": "end_node",
+      "type": "end",
+      "message": null
+    }
+  }
+}
