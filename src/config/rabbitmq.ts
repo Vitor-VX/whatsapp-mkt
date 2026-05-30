@@ -18,15 +18,15 @@ const QUEUE_CONFIG = {
         },
     },
     whatsapp_outbound: {
-        name: 'whatsapp.outbound',
+        name: 'whatsapp.outbound.delva',
         options: { durable: true },
     },
     payment_events: {
-        name: 'payment.events',
+        name: 'payment.events.delva',
         options: { durable: true },
     },
     whatsapp_inbound_dlq: {
-        name: 'whatsapp.inbound.dlq',
+        name: 'whatsapp.inbound.dlq.delva',
         options: { durable: true },
     },
 };
