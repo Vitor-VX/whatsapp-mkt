@@ -195,7 +195,7 @@
     "delay_explica_01": {
       "id": "delay_explica_01",
       "type": "delay",
-      "ms": 20000,
+      "ms": 40000,
       "nextNode": "msg_info_02"
     },
     "msg_info_02": {
@@ -207,7 +207,7 @@
     "delay_explica_02": {
       "id": "delay_explica_02",
       "type": "delay",
-      "ms": 3000,
+      "ms": 35000,
       "nextNode": "confirm_posso_enviar"
     },
     "confirm_posso_enviar": {
@@ -280,12 +280,12 @@
         {
           "id": "pay",
           "title": "Ajudar R$10,90",
-          "nextNode": "create_payment_one"
+          "nextNode": "send_payment_link_one"
         },
         {
           "id": "pay-two",
           "title": "Ajudar R$19,90",
-          "nextNode": "create_payment_two"
+          "nextNode": "send_payment_link_two"
         }
       ]
     },
@@ -304,12 +304,12 @@
     "send_code_pix_two": {
       "id": "send_code_pix_two",
       "type": "pix",
-      "content": "{{pixCode}}",
+      "content": "69992089165",
       "price": "1990",
       "namePix": "João Victor Rocha Neto",
-      "key": "69993161840",
+      "key": "69992089165",
       "keyType": "PHONE",
-      "nextNode": "wait_payment_two"
+      "nextNode": "pix_data_msg_02"
     },
     "create_payment_one": {
       "id": "create_payment_one",
@@ -326,25 +326,49 @@
     "send_code_pix_one": {
       "id": "send_code_pix_one",
       "type": "pix",
-      "content": "{{pixCode}}",
+      "content": "69992089165",
       "price": "1090",
       "namePix": "João Victor Rocha Neto",
-      "key": "69993161840",
+      "key": "69992089165",
       "keyType": "PHONE",
+      "nextNode": "pix_data_msg_01"
+    },
+    "pix_data_msg_02": {
+      "id": "pix_data_msg_02",
+      "type": "text",
+      "content": "📋 Dados para o PIX:\n\n👤 *Nome:* João Victor Rocha Neto\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$19,90\n\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
+      "nextNode": "pix_telefone_02"
+    },
+    "pix_data_msg_01": {
+      "id": "pix_data_msg_01",
+      "type": "text",
+      "content": "📋 *Dados para o PIX:*\n\n👤 *Nome:* João Victor Rocha Neto\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$10,90\n\n─────────────────────\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
+      "nextNode": "pix_telefone_01"
+    },
+    "pix_telefone_01": {
+      "id": "pix_telefone_01",
+      "type": "text",
+      "content": "*69992089165*",
+      "nextNode": "wait_payment_one"
+    },
+    "pix_telefone_02": {
+      "id": "pix_telefone_02",
+      "type": "text",
+      "content": "*69992089165*",
       "nextNode": "wait_payment_one"
     },
     "wait_payment_one": {
       "id": "wait_payment_one",
       "type": "waitInput",
       "saveAs": "_paymentConfirmation",
-      "content": "Perfeito 🙌\n\nAgora você pode fazer a contribuição de *R$ 10,90* pra apoiar o nosso projeto 🙏\n\nQue a paz do Senhor esteja com você ✨",
+      "content": "Perfeito 🙌\n\nAgora só você fazer a contribuição de *R$ 10,90* pra apoiar o nosso projeto 🙏\n\nQue a paz do Senhor esteja com você ✨",
       "nextNode": "payment_pending_hold"
     },
     "wait_payment_two": {
       "id": "wait_payment_two",
       "type": "waitInput",
       "saveAs": "_paymentConfirmation",
-      "content": "Excelente escolha! Que bênção! 🙌\n\nAgora você pode fazer a sua contribuição solidária de *R$ 19,90* no PIX acima.\n\nAssim que concluir, eu já deixo salvo seu nome na lista do sorteio da bolsa! 🛍️\n\nMuito obrigado por apoiar esse projeto! 🙏✨",
+      "content": "Excelente escolha! Que bênção! 🙌\n\nAgora só você fazer a sua contribuição solidária de *R$ 19,90* no PIX acima.\n\nAssim que concluir, eu já deixo salvo seu nome na lista do sorteio da bolsa! 🛍️\n\nMuito obrigado por apoiar esse projeto! 🙏✨",
       "nextNode": "payment_pending_hold"
     },
     "payment_pending_hold": {
