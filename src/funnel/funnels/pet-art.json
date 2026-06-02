@@ -336,13 +336,13 @@
     "pix_data_msg_02": {
       "id": "pix_data_msg_02",
       "type": "text",
-      "content": "📋 Dados para o PIX:\n\n👤 *Nome:* João Victor Rocha Neto\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$19,90\n\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
+      "content": "✅ Dados para o PIX:\n\n👤 *Nome:* João Victor Rocha Neto (Meu Esposo)\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$19,90\n\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
       "nextNode": "pix_telefone_02"
     },
     "pix_data_msg_01": {
       "id": "pix_data_msg_01",
       "type": "text",
-      "content": "📋 *Dados para o PIX:*\n\n👤 *Nome:* João Victor Rocha Neto\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$10,90\n\n─────────────────────\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
+      "content": "✅ Dados para o PIX:\n\n👤 *Nome:* João Victor Rocha Neto (Meu Esposo)\n🔑 *Chave PIX (TELEFONE):* 69992089165\n💰 *Valor:* R$10,90\n\n─────────────────────\n⚠️ Após pagar, é só me mandar uma mensagem aqui confirmando, tá? 😊",
       "nextNode": "pix_telefone_01"
     },
     "pix_telefone_01": {
