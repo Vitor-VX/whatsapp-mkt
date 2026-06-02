@@ -187,17 +187,17 @@ export function initializeActionHandlers(): void {
         logger.debug(`[prepareCheckout] ${priceStr} for ${user.whatsappId}`);
     });
 
-    actionRegistry.register("createPixPayment", async (_node: ActionNode, user, _ctx) => {
-        logger.info(`[createPixPayment] Creating Pix for ${user.whatsappId}`);
+    actionRegistry.register("createPixPayment_one", async (_node: ActionNode, user, _ctx) => {
+        logger.info(`[create_payment_one] Creating Pix for ${user.whatsappId}`);
 
         try {
-            const packagePrice = parseFloat("9.90");
+            const packagePrice = parseFloat("10.90");
 
             const { code, qrCodeBase64, paymentId } = await mercadoPagoService.createPixPayment(
                 user.whatsappId,
                 user._id,
                 packagePrice,
-                `Artes Viral`
+                `Pdf's Biblicos`
             );
 
             await User.updateOne(
@@ -212,9 +212,41 @@ export function initializeActionHandlers(): void {
                 }
             );
 
-            logger.info(`[createPixPayment] Pix created for ${user.whatsappId} — paymentId: ${paymentId}`);
+            logger.info(`[create_payment_one] Pix created for ${user.whatsappId} — paymentId: ${paymentId}`);
         } catch (error) {
-            logger.error(`[createPixPayment] ${error instanceof Error ? error.message : String(error)}`);
+            logger.error(`[create_payment_one] ${error instanceof Error ? error.message : String(error)}`);
+            throw error;
+        }
+    });
+    
+    actionRegistry.register("createPixPayment_two", async (_node: ActionNode, user, _ctx) => {
+        logger.info(`[create_payment_two] Creating Pix for ${user.whatsappId}`);
+
+        try {
+            const packagePrice = parseFloat("19.90");
+
+            const { code, qrCodeBase64, paymentId } = await mercadoPagoService.createPixPayment(
+                user.whatsappId,
+                user._id,
+                packagePrice,
+                `Pdf's Biblicos`
+            );
+
+            await User.updateOne(
+                { _id: user._id },
+                {
+                    $set: {
+                        "payment.id": paymentId,
+                        "payment.qrCode": qrCodeBase64,
+                        "payment.code": code,
+                        "collectedData.pixCode": code,
+                    },
+                }
+            );
+
+            logger.info(`[create_payment_two] Pix created for ${user.whatsappId} — paymentId: ${paymentId}`);
+        } catch (error) {
+            logger.error(`[create_payment_two] ${error instanceof Error ? error.message : String(error)}`);
             throw error;
         }
     });
@@ -222,35 +254,71 @@ export function initializeActionHandlers(): void {
     actionRegistry.register("deliverProductCards", async (_node: ActionNode, user, _ctx) => {
         logger.info(`[deliverProductCards] Starting delivery for ${user.whatsappId}`);
 
-        await whatsappService.sendCarousel(user.whatsappId, {
-            bodyText: "🎨 Aqui estão suas 2 artes editáveis!\n\nClique em *Editar no Canva* em cada card e personalize com o seu @:",
-            cards: [
-                {
-                    headerType: "image",
-                    mediaUrl: "https://files.botsync.site/mkt-guerrilha/Captura%20de%20tela%202026-05-29%20185816.png",
-                    body: "🎨 Arte 1 — Cupom de desconto\nEdite com o seu @ e seu desconto!",
-                    buttons: [
-                        {
-                            type: "url",
-                            title: "Editar no Canva",
-                            url: "https://canva.link/top-packs-01"
-                        }
-                    ]
-                },
-                {
-                    headerType: "image",
-                    mediaUrl: "https://files.botsync.site/mkt-guerrilha/Captura%20de%20tela%202026-05-29%20193723.png",
-                    body: "🎨 Arte 2 — Layout alternativo\nEdite do seu jeito!",
-                    buttons: [
-                        {
-                            type: "url",
-                            title: "Editar no Canva",
-                            url: "https://canva.link/top-packs-02"
-                        }
-                    ]
+        const pdfs = [
+            {
+                caption: "Bilhetes Biblicos",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_01.pdf"
+            },
+            {
+                caption: "Borboletas",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_02.pdf"
+            },
+            {
+                caption: "Cruz",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_03.pdf"
+            },
+            {
+                caption: "Dinheiro",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_04_novo.pdf"
+            },
+            {
+                caption: "Flores",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_05_novo.pdf"
+            },
+            {
+                caption: "Igreja",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_07.pdf"
+            },
+            {
+                caption: "Porta Jesus",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_08.pdf"
+            },
+            {
+                caption: "Smile",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_09.pdf"
+            },
+            {
+                caption: "Tags para evangelizar",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_10.pdf"
+            },
+            {
+                caption: "Tags alarme",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_11.pdf"
+            },
+            {
+                caption: "Bilhetes Biblicos",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_12.pdf"
+            },
+            {
+                caption: "Como Editar os Bilhetes",
+                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/como_editar.pdf"
+            },
+        ]
+
+        await new Promise(res => setTimeout(res, 3000));
+
+        for (const el of pdfs) {
+            await whatsappService.sendMessage(user.phone, {
+                type: "document",
+                document: {
+                    link: el.url,
+                    filename: el.caption + ".pdf",
+                    caption: el.caption
                 }
-            ]
-        })
+            });
+
+            await new Promise(res => setTimeout(res, 1000));
+        }
     });
 }
 

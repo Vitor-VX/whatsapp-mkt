@@ -177,10 +177,6 @@ export class FunnelExecutor {
         const components = node.components || [];
         const language = node.language || "pt_BR";
 
-        console.log(components);
-        console.log(templateName);
-
-
         try {
             await this.context.whatsappService.sendTemplate(
                 this.context.user.whatsappId,
@@ -197,13 +193,13 @@ export class FunnelExecutor {
     }
 
     /**
-     * Send audio to user
-     */
+ * Send audio to user
+ */
     private async executeAudio(node: any): Promise<string | null> {
         try {
             await this.context.whatsappService.sendMessage(this.context.user.whatsappId, {
                 type: 'audio',
-                audio: { link: node.url },
+                audio: { link: node.url, voice: node.voice },
             });
             logger.botMessage(this.context.user.phone, `[AUDIO] ${node.url}`);
         } catch (error) {

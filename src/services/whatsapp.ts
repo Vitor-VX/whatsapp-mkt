@@ -9,6 +9,12 @@ interface WhatsAppMessage {
     image?: { link: string };
     audio?: { link: string, voice: boolean };
     video?: { link: string };
+    document?: {
+        link?: string;
+        id?: string;
+        filename?: string;
+        caption?: string;
+    };
     caption?: string;
     interactive?: any;
 }
@@ -104,7 +110,7 @@ export class WhatsAppService {
                     break;
                 case "audio":
                     payload.audio = message.audio;
-                    payload.audio.voice = true;
+                    payload.audio.voice = message.audio?.voice;
                     break;
                 case "video":
                     payload.video = message.video;
@@ -112,6 +118,25 @@ export class WhatsAppService {
                         payload.video.caption = message.caption;
                     }
                     break;
+
+                case "document":
+                    payload.document = {};
+
+                    if (message.document?.id) {
+                        payload.document.id = message.document.id;
+                    } else if (message.document?.link) {
+                        payload.document.link = message.document.link;
+                    }
+
+                    if (message.document?.filename) {
+                        payload.document.filename = message.document.filename;
+                    }
+
+                    if (message.document?.caption) {
+                        payload.document.caption = message.document.caption;
+                    }
+                    break;
+
                 case "interactive":
                     payload.interactive = message.interactive;
                     break;

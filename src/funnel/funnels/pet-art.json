@@ -13,7 +13,7 @@
     "msg_1": {
       "id": "msg_1",
       "type": "text",
-      "content": "Oi, tudo bem? 👋",
+      "content": "Oioi, *Paz do Senhor* 👋",
       "nextNode": "delay_1"
     },
     "delay_1": {
@@ -25,7 +25,7 @@
     "msg_2": {
       "id": "msg_2",
       "type": "text",
-      "content": "Deixa eu te mostrar uma coisa rápida 👀",
+      "content": "Tudo bem com você? Espero que sim!",
       "nextNode": "delay_2"
     },
     "delay_2": {
@@ -36,16 +36,16 @@
     },
     "msg_3": {
       "id": "msg_3",
-      "type": "image",
-      "url": "https://files.botsync.site/mkt-guerrilha/Captura%20de%20tela%202026-05-29%20202849.png",
-      "caption": "Você já viu aquelas notas de *R$20* que o pessoal deixa na rua e viraliza no Instagram?",
+      "type": "audio",
+      "voice": true,
+      "url": "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/audio_funil_01_novo.opus",
       "nextNode": "delay_3"
     },
     "delay_3": {
       "id": "delay_3",
       "type": "delay",
-      "ms": 1500,
-      "nextNode": "msg_4"
+      "ms": 10000,
+      "nextNode": "delay_buttons"
     },
     "msg_4": {
       "id": "msg_4",
@@ -57,7 +57,7 @@
       "id": "delay_4",
       "type": "delay",
       "ms": 1100,
-      "nextNode": "msg_5"
+      "nextNode": "delay_buttons"
     },
     "msg_5": {
       "id": "msg_5",
@@ -110,7 +110,7 @@
     "msg_contribution_2": {
       "id": "msg_contribution_2",
       "type": "text",
-      "content": "Eu te envio tudo antes… e depois você só faz uma contribuição simbólica de *R$9,90* no PIX pelo meu trabalho 🙏",
+      "content": "Eu te envio tudo antes… e depois você só faz uma contribuição simbólica de *R$10,90* no PIX pelo meu trabalho 🙏",
       "nextNode": "delay_9"
     },
     "delay_9": {
@@ -147,16 +147,16 @@
     "desire_buttons": {
       "id": "desire_buttons",
       "type": "buttons",
-      "body": "Quer receber os 2 modelos prontos e editáveis no Canva agora mesmo? 👇",
+      "body": "*Posso* te apresentar como funciona?\n\n Clique em alguma opção abaixo por favor:",
       "buttons": [
         {
           "id": "yes",
-          "title": "Pode enviar!",
+          "title": "Pode explicar!",
           "nextNode": "confirm_buttons"
         },
         {
           "id": "how_it_works_btn",
-          "title": "Como funciona? 🤔",
+          "title": "Hoje não irmã!",
           "nextNode": "how_it_works"
         }
       ]
@@ -164,7 +164,7 @@
     "how_it_works": {
       "id": "how_it_works",
       "type": "text",
-      "content": "É bem simples:\n\n1️⃣ Você baixa os 2 modelos editáveis no Canva\n2️⃣ Coloca seu @ ou QR Code\n3️⃣ Imprime onde quiser\n\nE pronto — já começa a atrair gente 👀\n\nEu só peço uma contribuição simbólica de *R$9,90* no PIX, pra ajudar meu trabalho 🙏",
+      "content": "Tudo bem! Caso mude de ideia, estou por aqui tá?",
       "nextNode": "delay_back_buttons"
     },
     "delay_back_buttons": {
@@ -175,38 +175,83 @@
     },
     "confirm_buttons": {
       "id": "confirm_buttons",
+      "type": "video",
+      "url": "https://files.botsync.site/mkt-guerrilha/video_demonstracao-tags.mp4",
+      "content": "Perfeito 🙌\n\nOlha como fica lindo!",
+      "nextNode": "delay_video"
+    },
+    "delay_video": {
+      "id": "delay_video",
+      "type": "delay",
+      "ms": 10000,
+      "nextNode": "msg_info_01"
+    },
+    "msg_info_01": {
+      "id": "msg_info_01",
+      "type": "text",
+      "content": "✨ *Bilhetinhos Bíblicos de Salmos* ✝️📖\n\nPerfeitos para presentear e compartilhar a Palavra de Deus 💛\n\n✅ *+160 bilhetinhos com Salmos*\n✅ *6 modelos diferentes e exclusivos*\n✅ *Todos em formato 3D*\n✅ *Apenas com Salmos e mensagens bíblicas*\n✅ *Prontos para imprimir, recortar e montar*\n✅ *Ideais para lembrancinhas, igreja ou presentear*\n\n🎁 *Ideias de papelaria bíblica para imprimir*\n🎁 *Passo a passo completo de montagem*\n\n📩 *Envio imediato*\n🖨️ *PDF pronto para imprimir*",
+      "nextNode": "delay_explica_01"
+    },
+    "delay_explica_01": {
+      "id": "delay_explica_01",
+      "type": "delay",
+      "ms": 20000,
+      "nextNode": "msg_info_02"
+    },
+    "msg_info_02": {
+      "id": "msg_info_02",
+      "type": "text",
+      "content": "🙏 Esse material dá bastante trabalho pra preparar...\nPor isso, a gente pede uma pequena ajuda pra continuar criando mais conteúdos bíblicos como esse 💛\n\nE como eu sei que hoje em dia muita gente tem receio na internet...\nEu prefiro fazer diferente 👇\n\n📩 *Eu te envio todo o material primeiro*\n\nAí você olha com calma...\nE, se gostar e fizer sentido pra você, pode contribuir com *R$10,90* pra apoiar esse projeto 😊\n\n✨ Assim fica leve, justo e transparente pra todo mundo!",
+      "nextNode": "delay_explica_02"
+    },
+    "delay_explica_02": {
+      "id": "delay_explica_02",
+      "type": "delay",
+      "ms": 3000,
+      "nextNode": "confirm_posso_enviar"
+    },
+    "confirm_posso_enviar": {
+      "id": "confirm_posso_enviar",
       "type": "buttons",
-      "body": "Perfeito 🙌\n\nComo eu te falei, eu te envio tudo antes…\n\nE depois você faz só a contribuição de *R$9,90* no PIX pra apoiar meu trabalho 😊\n\nFechado assim?",
+      "body": "💬 *Viu como funciona?* 😊\n\nPosso realmente te enviar todo o material 📖✨\n\nTudo isso por um valor simbólico de apenas *R$10,90* 🙏💕\n\nAssim você já recebe tudo e pode olhar com calma 💛",
       "buttons": [
         {
-          "id": "confirm",
-          "title": "Pode enviar ✅",
-          "nextNode": "deliver_product"
-        },
-        {
-          "id": "cancel",
-          "title": "Não, prefiro não",
-          "nextNode": "soft_cancel"
+          "id": "yes",
+          "title": "Pode enviar!",
+          "nextNode": "aviso_envio"
         }
       ]
+    },
+    "aviso_envio": {
+      "id": "aviso_envio",
+      "type": "text",
+      "content": "Perfeito!\nLogo abaixo vou enviar o material completo 👇",
+      "nextNode": "deliver_product"
     },
     "deliver_product": {
       "id": "deliver_product",
       "type": "action",
       "action": "deliverProductCards",
-      "nextNode": "delivered_msg"
+      "nextNode": "delivered_audio_product"
     },
-    "delivered_msg": {
-      "id": "delivered_msg",
-      "type": "text",
-      "content": "Pronto! 🎉 É só clicar em *Editar no Canva*, você pode editar o que quiser e mandar imprimir!\n\nQualquer dúvida pra editar, é só chamar aqui 😊",
-      "nextNode": "audio_dalva_2"
+    "delivered_audio_product": {
+      "id": "delivered_audio_product",
+      "type": "audio",
+      "url": "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/audio_funil_02.opus",
+      "voice": true,
+      "nextNode": "delay_audio_2"
     },
     "delay_audio_2": {
       "id": "delay_audio_2",
       "type": "delay",
-      "ms": 2000,
-      "nextNode": "audio_dalva_2"
+      "ms": 40000,
+      "nextNode": "msg_sorteio"
+    },
+    "msg_sorteio": {
+      "id": "msg_sorteio",
+      "type": "text",
+      "content": "*Tudo entregue como combinamos!* ❤️\n\nFico muito feliz de poder te abençoar com esse material 🙏✨\n\nComo esse é um *projeto independente*, feito com muito carinho, contamos com o apoio dos irmãos para continuar criando mais conteúdos como esse 💛\n\nPor isso, você pode escolher a forma de contribuir que fizer mais sentido pra você:\n\n💝 *R$ 9,90* ➔ Apoio ao projeto + acesso completo aos materiais\n\n✨ *R$ 19,90* ➔ Apoio solidário + participação no *Grande Sorteio da Bolsa Bíblica* 🎉\n\n🛍️ *Sobre o sorteio:*\nNo dia *11 de junho*, vamos sortear uma bolsa/mochila organizadora bíblica 📖\n\nComo nosso envio é digital, o ganhador recebe *R$50,00 via Pix* para escolher o modelo que quiser 💸\n\nTalvez pra você seja um valor simples…\nMas pra nós, faz *toda a diferença* pra continuar esse ministério digital ativo 🙏✨\n\nVou te enviar a chave Pix certinha agora, tudo bem? 💛",
+      "nextNode": "delay_pitch_3"
     },
     "audio_dalva_2": {
       "id": "audio_dalva_2",
@@ -224,53 +269,82 @@
     "delay_pitch_3": {
       "id": "delay_pitch_3",
       "type": "delay",
-      "ms": 1000,
+      "ms": 20000,
       "nextNode": "payment_buttons"
     },
     "payment_buttons": {
       "id": "payment_buttons",
       "type": "buttons",
-      "body": "Quando quiser confirmar, é só clicar aqui 👇",
+      "body": "Quando quiser confirmar a contribuição, é só clicar em uma das opções abaixo, tá!? Deus abençoe:",
       "buttons": [
         {
           "id": "pay",
-          "title": "💳 Pagar R$9,90",
-          "nextNode": "create_payment"
+          "title": "Ajudar R$10,90",
+          "nextNode": "create_payment_one"
         },
         {
-          "id": "skip",
-          "title": "Depois eu pago",
-          "nextNode": "skip_payment"
+          "id": "pay-two",
+          "title": "Ajudar R$19,90",
+          "nextNode": "create_payment_two"
         }
       ]
     },
-    "create_payment": {
-      "id": "create_payment",
+    "create_payment_two": {
+      "id": "create_payment_two",
       "type": "action",
-      "action": "createPixPayment",
-      "nextNode": "send_payment_link"
+      "action": "createPixPayment_two",
+      "nextNode": "send_payment_link_two"
     },
-    "send_payment_link": {
-      "id": "send_payment_link",
+    "send_payment_link_two": {
+      "id": "send_payment_link_two",
       "type": "text",
-      "content": "Aqui está a chave Copia e Cola para a sua contribuição de *R$ 9,90* no PIX 👇",
-      "nextNode": "send_code_pix"
+      "content": "Aqui está a chave Copia e Cola para a sua contribuição de *R$ 19,90* no PIX 👇",
+      "nextNode": "send_code_pix_two"
     },
-    "send_code_pix": {
-      "id": "send_code_pix",
+    "send_code_pix_two": {
+      "id": "send_code_pix_two",
       "type": "pix",
       "content": "{{pixCode}}",
-      "price": "990",
+      "price": "1990",
       "namePix": "João Victor Rocha Neto",
       "key": "69993161840",
       "keyType": "PHONE",
-      "nextNode": "wait_payment"
+      "nextNode": "wait_payment_two"
     },
-    "wait_payment": {
-      "id": "wait_payment",
+    "create_payment_one": {
+      "id": "create_payment_one",
+      "type": "action",
+      "action": "createPixPayment_one",
+      "nextNode": "send_payment_link_one"
+    },
+    "send_payment_link_one": {
+      "id": "send_payment_link_one",
+      "type": "text",
+      "content": "Aqui está a chave Copia e Cola para a sua contribuição de *R$ 10,90* no PIX 👇",
+      "nextNode": "send_code_pix_one"
+    },
+    "send_code_pix_one": {
+      "id": "send_code_pix_one",
+      "type": "pix",
+      "content": "{{pixCode}}",
+      "price": "1090",
+      "namePix": "João Victor Rocha Neto",
+      "key": "69993161840",
+      "keyType": "PHONE",
+      "nextNode": "wait_payment_one"
+    },
+    "wait_payment_one": {
+      "id": "wait_payment_one",
       "type": "waitInput",
       "saveAs": "_paymentConfirmation",
-      "content": "Perfeito 🙌\n\nAgora você pode fazer a contribuição de *R$9,90* pra apoiar meu trabalho 🙏\n\nE ó, um detalhe importante 👇\n\nQuem fizer isso *ainda hoje* eu coloco numa lista fechada onde envio *todas as novas artes que eu criar antes de liberar pro restante* 🎁\n\nSempre que sair algo novo, você recebe primeiro.\n\nDepois eu fecho essa lista pra não ficar grande demais 🙂",
+      "content": "Perfeito 🙌\n\nAgora você pode fazer a contribuição de *R$ 10,90* pra apoiar o nosso projeto 🙏\n\nQue a paz do Senhor esteja com você ✨",
+      "nextNode": "payment_pending_hold"
+    },
+    "wait_payment_two": {
+      "id": "wait_payment_two",
+      "type": "waitInput",
+      "saveAs": "_paymentConfirmation",
+      "content": "Excelente escolha! Que bênção! 🙌\n\nAgora você pode fazer a sua contribuição solidária de *R$ 19,90* no PIX acima.\n\nAssim que concluir, eu já deixo salvo seu nome na lista do sorteio da bolsa! 🛍️\n\nMuito obrigado por apoiar esse projeto! 🙏✨",
       "nextNode": "payment_pending_hold"
     },
     "payment_pending_hold": {
@@ -278,10 +352,16 @@
       "type": "text",
       "content": "Verificando o pagamento... 🔍"
     },
-    "payment_confirmed": {
-      "id": "payment_confirmed",
+    "payment_confirmed_one": {
+      "id": "payment_confirmed_one",
       "type": "text",
-      "content": "✅ Pagamento confirmado com sucesso! Muito obrigado pela sua honestidade e apoio. Que essas artes te tragam uma enxurrada de clientes! 🚀💛",
+      "content": "✅ Contribuição de *R$ 10,90* confirmada com sucesso! Muito obrigado pela sua honestidade e apoio ao nosso projeto! 💛\n\nJá te coloquei numa lista especial por aqui! Assim, sempre que eu tiver novas ideias e criar novas papelarias bíblicas, você vai ser uma das primeiras pessoas a receber tudo direto no seu WhatsApp! 😊\n\nE ah, o passo a passo completo em vídeo ensinando a montar eu estou finalizando as gravações e vou te enviar aqui um pouquinho mais para frente, tá bom? Que Deus te abençoe grandemente! ✨",
+      "nextNode": "end_node"
+    },
+    "payment_confirmed_two": {
+      "id": "payment_confirmed_two",
+      "type": "text",
+      "content": "✅ Contribuição solidária de *R$ 19,90* confirmada com sucesso! Que bênção, muito obrigado pelo seu apoio generoso! 💛\n\n🎉 **Você já está participando oficialmente do nosso Sorteio!** Seu nome foi cadastrado na lista oficial para concorrer à **Bolsa Organizadora Bíblica** no dia **11 de junho**! Boa sorte! 🎟️🛍️\n\nAlém disso, você já está na minha lista fechada: quando eu liberar novas ideias de papelaria bíblica, eu te mando em primeira mão por aqui! E as aulas completas com o passo a passo de montagem, como estou terminando de gravar os novos detalhes, eu te envio completinho daqui a um tempo, combinado? 🙏✨",
       "nextNode": "end_node"
     },
     "soft_cancel": {

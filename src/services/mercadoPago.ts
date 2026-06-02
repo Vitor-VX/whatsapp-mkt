@@ -28,7 +28,7 @@ export class MercadoPagoService {
         expiresAt: string;
     }> {
         try {
-            const expiresAt = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString();
+            const expiresAt = new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString();
             const response = await this.payment.create({
                 body: {
                     transaction_amount: amount,
