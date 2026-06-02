@@ -237,7 +237,7 @@
     "delivered_audio_product": {
       "id": "delivered_audio_product",
       "type": "audio",
-      "url": "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/audio_funil_02.opus",
+      "url": "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/audio_funil_01_novo.opus",
       "voice": true,
       "nextNode": "delay_audio_2"
     },
