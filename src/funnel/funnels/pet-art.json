@@ -38,7 +38,7 @@
       "id": "msg_3",
       "type": "audio",
       "voice": true,
-      "url": "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/audio_funil_01_novo.opus",
+      "url": "https://files.botsync.site/mkt-guerrilha/audio_funil_01.opus",
       "nextNode": "delay_3"
     },
     "delay_3": {
