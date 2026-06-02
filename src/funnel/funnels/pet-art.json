@@ -355,7 +355,7 @@
       "id": "pix_telefone_02",
       "type": "text",
       "content": "*69992089165*",
-      "nextNode": "wait_payment_one"
+      "nextNode": "wait_payment_two"
     },
     "wait_payment_one": {
       "id": "wait_payment_one",
