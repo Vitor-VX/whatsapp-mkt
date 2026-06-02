@@ -358,6 +358,12 @@
       "content": "✅ Contribuição de *R$ 10,90* confirmada com sucesso! Muito obrigado pela sua honestidade e apoio ao nosso projeto! 💛\n\nJá te coloquei numa lista especial por aqui! Assim, sempre que eu tiver novas ideias e criar novas papelarias bíblicas, você vai ser uma das primeiras pessoas a receber tudo direto no seu WhatsApp! 😊\n\nE ah, o passo a passo completo em vídeo ensinando a montar eu estou finalizando as gravações e vou te enviar aqui um pouquinho mais para frente, tá bom? Que Deus te abençoe grandemente! ✨",
       "nextNode": "end_node"
     },
+    "payment_confirmed": {
+      "id": "payment_confirmed",
+      "type": "text",
+      "content": "✅ Contribuição confirmada com sucesso! Muito obrigado pela sua honestidade e por apoiar o nosso projeto! 💛\n\nJá te coloquei na minha lista especial por aqui! Sempre que eu tiver novas ideias e criar novas papelarias bíblicas, você vai ser uma das primeiras pessoas a receber tudo em primeira mão direto no seu WhatsApp! 😊\n\nE ah, sobre o passo a passo completo em vídeo ensinando a montar: eu já estou finalizando as novas gravações e vou te enviar o link aqui um pouquinho mais para frente, combinado? 🙏✨\n\n🎟️ **Para quem contribuiu com R$ 19,90:**\nSe você escolheu a opção solidária, excelente! Seu nome já foi cadastrado de forma automática na lista oficial do nosso **Sorteio da Bolsa Organizadora Bíblica** que vai acontecer no dia **11 de junho**! Boa sorte! 🛍️🎉\n\nQue Deus abençoe grandemente a sua vida!",
+      "nextNode": "end_node"
+    },
     "payment_confirmed_two": {
       "id": "payment_confirmed_two",
       "type": "text",
