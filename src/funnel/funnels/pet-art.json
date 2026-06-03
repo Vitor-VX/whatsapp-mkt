@@ -362,19 +362,19 @@
       "type": "waitInput",
       "saveAs": "_paymentConfirmation",
       "content": "Perfeito 🙌\n\nAgora só você fazer a contribuição de *R$ 10,90* pra apoiar o nosso projeto 🙏\n\nQue a paz do Senhor esteja com você ✨",
-      "nextNode": "payment_pending_hold"
+      "nextNode": "end_node"
     },
     "wait_payment_two": {
       "id": "wait_payment_two",
       "type": "waitInput",
       "saveAs": "_paymentConfirmation",
       "content": "Excelente escolha! Que bênção! 🙌\n\nAgora só você fazer a sua contribuição solidária de *R$ 19,90* no PIX acima.\n\nAssim que concluir, eu já deixo salvo seu nome na lista do sorteio da bolsa! 🛍️\n\nMuito obrigado por apoiar esse projeto! 🙏✨",
-      "nextNode": "payment_pending_hold"
+      "nextNode": "end_node"
     },
     "payment_pending_hold": {
       "id": "payment_pending_hold",
       "type": "text",
-      "content": "Verificando o pagamento... 🔍"
+      "content": "Oi oi, vou verificar o seu pagamento, tá? Deus abençoe!"
     },
     "payment_confirmed_one": {
       "id": "payment_confirmed_one",
