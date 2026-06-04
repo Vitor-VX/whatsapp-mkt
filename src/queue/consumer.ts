@@ -256,63 +256,41 @@ export function initializeActionHandlers(): void {
 
         const pdfs = [
             {
-                caption: "Bilhetes Biblicos",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_01.pdf"
+                caption: "Cartões de Evangelização - *Biblia*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_biblia.pdf"
             },
             {
-                caption: "Borboletas",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_02.pdf"
+                caption: "Cartões de Evangelização - *Borboletas*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_borboletas.pdf"
             },
             {
-                caption: "Cruz",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_03.pdf"
+                caption: "Cartões de Evangelização - *Coração*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_coracao.pdf"
             },
             {
-                caption: "Dinheiro",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_04_novo.pdf"
+                caption: "Cartões de Evangelização - *Frutas*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_frutas.pdf"
             },
             {
-                caption: "Flores",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_05_novo.pdf"
+                caption: "Cartões de Evangelização - *Girassol*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_girassol.pdf"
             },
             {
-                caption: "Igreja",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_07.pdf"
-            },
-            {
-                caption: "Porta Jesus",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_08.pdf"
-            },
-            {
-                caption: "Smile",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_09.pdf"
-            },
-            {
-                caption: "Tags para evangelizar",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_10.pdf"
-            },
-            {
-                caption: "Tags alarme",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_11.pdf"
-            },
-            {
-                caption: "Bilhetes Biblicos",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/pdf_12.pdf"
-            },
-            {
-                caption: "Como Editar os Bilhetes",
-                url: "https://files.botsync.site/mkt-guerrilha/pdf-tags-crista/como_editar.pdf"
-            },
-        ]
+                caption: "Cartões de Evangelização - *Ovelhas*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_ovelha.pdf"
+            }
+        ];
 
         await new Promise(res => setTimeout(res, 3000));
 
         for (const el of pdfs) {
+            const filename = el.url.split("/").pop();
+
             await whatsappService.sendMessage(user.phone, {
                 type: "document",
                 document: {
                     link: el.url,
-                    filename: el.caption + ".pdf",
+                    filename: filename,
                     caption: el.caption
                 }
             });
