@@ -218,7 +218,7 @@ export function initializeActionHandlers(): void {
             throw error;
         }
     });
-    
+
     actionRegistry.register("createPixPayment_two", async (_node: ActionNode, user, _ctx) => {
         logger.info(`[create_payment_two] Creating Pix for ${user.whatsappId}`);
 
@@ -355,6 +355,16 @@ async function processIncomingMessage(msg: ConsumeMessage | null): Promise<void>
             interactive?.button_reply?.id ||
             interactive?.list_reply?.id ||
             interactive?.carousel_reply?.button_reply?.id;
+
+
+        if (
+            user.currentNodeId &&
+            ["buttons", "list", "cards"].includes(currentNode.type) &&
+            !incomingButtonId
+        ) {
+            logger.warn("Ignorando mensagem enquanto espera botão");
+            return;
+        }
 
         if (currentNode.id === "payment_pending_hold") {
             logger.warn(
