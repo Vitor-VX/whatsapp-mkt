@@ -219,7 +219,7 @@
     "delay_explica_03": {
       "id": "delay_explica_03",
       "type": "delay",
-      "ms": 35000,
+      "ms": 10000,
       "nextNode": "confirm_posso_enviar"
     },
     "confirm_posso_enviar": {
