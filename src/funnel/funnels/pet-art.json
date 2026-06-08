@@ -166,6 +166,12 @@
       "id": "delay_tutorial",
       "type": "delay",
       "ms": 1000,
+      "nextNode": "mensagem_confirmacao"
+    },
+    "mensagem_confirmacao": {
+      "id": "mensagem_confirmacao",
+      "type": "text",
+      "content": "Irmã, consegue me confirmar se os *arquivos* chegaram *corretamente?*\nEu enviei eles logo acima tá? Se por algum motivo você não *estiver vendo* eles, me mande uma *mensagem aqui, que envio novamente!*\n\nDeus abençoe ❤️🙏",
       "nextNode": "delay_audio_2"
     },
     "delivered_audio_product": {
