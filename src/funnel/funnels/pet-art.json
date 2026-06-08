@@ -85,7 +85,7 @@
     "confirm_buttons": {
       "id": "confirm_buttons",
       "type": "video",
-      "url": "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/video_demonstracao_casual.mp4",
+      "url": "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/video_demo_novo.mp4",
       "caption": "Perfeito 🙌\n\nOlha como fica lindo! E não é só esse modelo de borboleta, tem *girassol*, *frutas*, *ovelha* e entre outras...",
       "nextNode": "delay_video"
     },
