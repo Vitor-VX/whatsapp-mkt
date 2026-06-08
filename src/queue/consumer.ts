@@ -256,12 +256,12 @@ export function initializeActionHandlers(): void {
 
         const pdfs = [
             {
-                caption: "Cartões de Evangelização - *Biblia*",
-                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_biblia.pdf"
-            },
-            {
                 caption: "Cartões de Evangelização - *Borboletas*",
                 url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_borboletas.pdf"
+            },
+            {
+                caption: "Cartões de Evangelização - *Flores*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_flores.pdf"
             },
             {
                 caption: "Cartões de Evangelização - *Coração*",
@@ -269,7 +269,7 @@ export function initializeActionHandlers(): void {
             },
             {
                 caption: "Cartões de Evangelização - *Frutas*",
-                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_frutas_novo.pdf"
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_frutas_frases_unicas.pdf"
             },
             {
                 caption: "Cartões de Evangelização - *Girassol*",
@@ -278,7 +278,11 @@ export function initializeActionHandlers(): void {
             {
                 caption: "Cartões de Evangelização - *Ovelhas*",
                 url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_ovelha.pdf"
-            }
+            },
+            {
+                caption: "Cartões de Evangelização - *Biblia*",
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_biblia.pdf"
+            },
         ];
 
         await new Promise(res => setTimeout(res, 3000));
