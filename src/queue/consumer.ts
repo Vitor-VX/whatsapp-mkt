@@ -269,7 +269,7 @@ export function initializeActionHandlers(): void {
             },
             {
                 caption: "Cartões de Evangelização - *Frutas*",
-                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_frutas.pdf"
+                url: "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/cartoes_de_evangelizacao_frutas_novo.pdf"
             },
             {
                 caption: "Cartões de Evangelização - *Girassol*",
