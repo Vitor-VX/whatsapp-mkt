@@ -45,7 +45,7 @@
       "id": "delay_3",
       "type": "delay",
       "ms": 10000,
-      "nextNode": "delay_buttons"
+      "nextNode": "confirm_buttons"
     },
     "delay_buttons": {
       "id": "delay_buttons",
@@ -56,12 +56,12 @@
     "desire_buttons": {
       "id": "desire_buttons",
       "type": "buttons",
-      "body": "*Posso* te apresentar como funciona?\n\nClique em alguma opção abaixo por favor:",
+      "body": "*Posso* terminar de mostrar como funciona?\n\nClique em alguma opção abaixo por favor:",
       "buttons": [
         {
           "id": "yes",
           "title": "Pode explicar!",
-          "nextNode": "confirm_buttons"
+          "nextNode": "msg_info_01"
         },
         {
           "id": "how_it_works_btn",
@@ -86,8 +86,8 @@
       "id": "confirm_buttons",
       "type": "video",
       "url": "https://files.botsync.site/mkt-guerrilha/pdfs-canvas-assinados/video_demonstracao_480p_novo.mp4",
-      "caption": "Perfeito 🙌\n\nOlha como fica lindo! E não é só esse modelo de borboleta, tem *girassol*, *frutas*, *ovelha* e entre outras...",
-      "nextNode": "delay_video"
+      "caption": "Olha como fica lindo! E não é só esse modelo de borboleta, tem *girassol*, *frutas*, *ovelha* e entre outras...",
+      "nextNode": "delay_buttons"
     },
     "delay_video": {
       "id": "delay_video",
