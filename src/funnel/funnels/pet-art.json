@@ -87,7 +87,7 @@
     "confirm_posso_enviar": {
       "id": "confirm_posso_enviar",
       "type": "buttons",
-      "body": "Posso te enviar o material completo agora? 📖✨\n\n*Clique em alguma opção abaixo:*",
+      "body": "Posso realmente te enviar todo o material 📖✨\n\nTudo isso por um valor simbólico de apenas *R$10,90* 🙏💕\n\nAssim você já recebe tudo e pode olhar com calma 📖✨\n\n*Clique em alguma opção abaixo:*",
       "buttons": [
         {
           "id": "yes",
